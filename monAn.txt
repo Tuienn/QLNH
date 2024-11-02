@@ -1,0 +1,12 @@
+H1$KimBap$1$2.0$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\kimbap.png
+T1$Đậu phụ$3$1.5$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\stinky-tofu.png
+T2$Súp nấm$3$2.5$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\soup.png
+V2$Thịt xiên$1$1.5$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\skewer.png
+H2$KimChi$2$2.5$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\kimchi.png
+T3$Lẩu cay$3$5.5$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\hot-pot.png
+T4$Há cảo$3$1.0$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\gyoza.png
+V3$Nem rán$3$2.0$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\fried-spring-rolls.png
+V4$Cơm rang$1$2.5$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\fried-rice.png
+T5$Gà nướng$3$5.5$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\chicken.png
+V5$Bánh mỳ$1$2.0$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\bread.png
+H3$Thịt BBQ$2$3.0$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\barbecue.png

@@ -1,0 +1,4 @@
+LT1$123$Nguyễn Thị Hồng Ngân$1/4/2003$Nữ$Quảng Ninh$0382322519$1$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\Ngann.jpg
+PV1$123$Nguyễn Quang Anh$4/7/2003$Nam$Nam Định$01123455678$0$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\QAnh.jpg
+PV2$123$Cao Nhật Minh$4/5/2002$Nam$Thái Bình$0495828028$0$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\CMinh.jpg
+TK1$123$Nguyễn Văn Hiếu$1/5/2003$Nam$Phú Thọ$0968378924$2$D:\Code\java-netbean projects\JavaSwingCNPM_VIP\FileImage\Hieu.jpg
