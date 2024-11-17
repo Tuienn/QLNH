@@ -265,11 +265,7 @@ public class quanLyNhanVien extends javax.swing.JPanel {
                     "Xóa nhân viên "+dsNV.get(index).getHoTen()+" thành công");
             dsNV.remove(index);
             
-            try {
-                JavaSwingCNPM_VIP.dsNV.luuVaoFile(JavaSwingCNPM_VIP.duongDanDSNV);//Lưu bảng sau khi thêm món vào file
-            } catch (IOException ex) {
-                Logger.getLogger(quanLyNhanVien.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            JavaSwingCNPM_VIP.dsNV.luuVaoFile();//Lưu bảng sau khi thêm món vào file
             
             reloadTable();
         }

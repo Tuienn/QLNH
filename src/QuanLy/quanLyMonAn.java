@@ -284,11 +284,7 @@ public class quanLyMonAn extends javax.swing.JPanel {
                     "Xóa món "+danhSachMonAn.dsMon.get(index).getTenMonAn()+" thành công");
             danhSachMonAn.dsMon.remove(index);
             
-            try {
-                dsMon.luuVaoFile(javaswingcnpm_vip.JavaSwingCNPM_VIP.duongDanDSMon);//Lưu bảng sau khi thêm món vào file
-            } catch (IOException ex) {
-                Logger.getLogger(quanLyMonAn.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            dsMon.luuVaoFile();//Lưu bảng sau khi thêm món vào file
             
             reloadTable();
         }

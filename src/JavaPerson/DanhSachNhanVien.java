@@ -76,47 +76,14 @@ public class DanhSachNhanVien {
         return null;
     }
     //Thao tác với file
-    public void luuVaoFile(String duongDan) throws IOException
+    public void luuVaoFile()
     {
-        FileWriter fw = new FileWriter(duongDan);
-        BufferedWriter bw = new BufferedWriter(fw);
-        
-        for(NhanVien nv : dsNV)
-        {
-            bw.write(nv.toStringFile());
-            bw.newLine();
-        }
-        
-        bw.close();
-        fw.close();
+        javaswingcnpm_vip.JavaSwingCNPM_VIP.dbhander.saveNhanVien(dsNV);
     }
     
-    public void docTuFile(String duongDan) throws FileNotFoundException, IOException
+    public void docTuFile()
     {
-        FileReader fr = new FileReader(duongDan);
-        BufferedReader br = new BufferedReader(fr);
-        
-        String str = "";
-        while((str=br.readLine())!=null)
-        {
-            String[] obj = str.split("\\$");
-            
-            String taiKhoan = obj[0];
-            String matKhau = obj[1];
-            String hoTen = obj[2];
-            String ngaySinh = obj[3];
-            String gioiTinh = obj[4];
-            String diaChi = obj[5];
-            String SDT = obj[6];
-            int chucVu = Integer.parseInt(obj[7]);
-            String filePathImage=obj[8];
-            
-            NhanVien nv = new NhanVien(taiKhoan, matKhau, hoTen, ngaySinh, gioiTinh, diaChi, SDT, chucVu, filePathImage);
-            dsNV.add(nv);
-        }
-        
-        br.close();
-        fr.close();
+        javaswingcnpm_vip.JavaSwingCNPM_VIP.dbhander.getAllNhanVien(dsNV);
     }  
     public void inDSNV()
     {

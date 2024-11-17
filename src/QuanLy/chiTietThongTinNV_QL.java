@@ -376,7 +376,7 @@ public class chiTietThongTinNV_QL extends javax.swing.JFrame {
     }//GEN-LAST:event_rbShowActionPerformed
 
     private void bUploadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUploadActionPerformed
-        JFileChooser fileChooser = new JFileChooser("D:\\Code\\java-netbean projects\\JavaSwingCNPM_VIP\\FileImage");
+        JFileChooser fileChooser = new JFileChooser("C:\\Users\\vien1\\Downloads\\OceanTech\\monPTPMUngDung\\JavaSwingCNPM_VIP_git\\FileImage");
         FileNameExtensionFilter imageFilter = new FileNameExtensionFilter("hinh anh", "jpg", "png");
         fileChooser.setFileFilter(imageFilter);
         fileChooser.setMultiSelectionEnabled(false);
@@ -432,11 +432,7 @@ public class chiTietThongTinNV_QL extends javax.swing.JFrame {
                 dsNV.get(quanLyNhanVien.indexDong_click).setFilePathImage(filePathImage);
         }
         
-        try {
-            javaswingcnpm_vip.JavaSwingCNPM_VIP.dsNV.luuVaoFile(javaswingcnpm_vip.JavaSwingCNPM_VIP.duongDanDSNV);
-        } catch (IOException ex) {
-            Logger.getLogger(chiTietThongTinNV_QL.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        javaswingcnpm_vip.JavaSwingCNPM_VIP.dsNV.luuVaoFile();
         
         //Xóa toàn bộ thông tin trên table
         dtm.getDataVector().removeAllElements();
