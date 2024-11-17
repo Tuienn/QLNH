@@ -7,6 +7,8 @@ import JavaPerson.DanhSachNhanVien;
 import LeTan.GiaoDienLeTan;
 import LeTan.danhSachMonAn;
 import LeTan.dsThongTinBan;
+import MySql.DatabaseConnection;
+import MySql.DatabaseHandler;
 import QuanLy.ChiTietHD;
 import QuanLy.GiaoDienQuanLy;
 import QuanLy.chiTietMonAn;
@@ -39,11 +41,6 @@ public class JavaSwingCNPM_VIP {
     public static boolean flag2=true;//Dùng cho tb dsMon
     public static boolean flag3=true;//Dùng cho tb dsHD
     public static boolean flag4=true;//Dùn cho tbDSNV
-    //Đường dẫn
-    public static String duongDanDSKH = "khachHang.txt";//Lưu tt khách hàng
-    public static String duongDanDSNV = "nhanVien.txt";//Lưu tt nhân viên-Không có quản lý
-    public static String duongDanDSMon = "monAn.txt";//Lưu tt món ăn
-    public static String duongDanDSHD = "hoaDon.txt";//Lưu tt hóa đơn
     //Đăng nhập
     public static DangNhap login = new DangNhap();
 
@@ -56,30 +53,29 @@ public class JavaSwingCNPM_VIP {
     public static DanhSachKhachHang dsKH = new DanhSachKhachHang();
     //Tổng hợp đườn dẫn file ảnh
     //package JavaPerson/DangNhap
-    public static String fileImageTK="D:\\Code\\java-netbean projects\\JavaSwingCNPM_VIP\\FileImage\\user.png";
-    public static String fileImageMK="D:\\Code\\java-netbean projects\\JavaSwingCNPM_VIP\\FileImage\\lock.png";
-    public static String fileImagePL="D:\\Code\\java-netbean projects\\JavaSwingCNPM_VIP\\FileImage\\settings.png";
-    public static String fileLogo="D:\\Code\\java-netbean projects\\JavaSwingCNPM_VIP\\FileImage\\logo2.png";
+    public static String fileImageTK="C:\\Users\\vien1\\Downloads\\OceanTech\\monPTPMUngDung\\JavaSwingCNPM_VIP_git\\FileImage\\user.png";
+    public static String fileImageMK="C:\\Users\\vien1\\Downloads\\OceanTech\\monPTPMUngDung\\JavaSwingCNPM_VIP_git\\FileImage\\lock.png";
+    public static String fileImagePL="C:\\Users\\vien1\\Downloads\\OceanTech\\monPTPMUngDung\\JavaSwingCNPM_VIP_git\\FileImage\\settings.png";
+    public static String fileLogo="C:\\Users\\vien1\\Downloads\\OceanTech\\monPTPMUngDung\\JavaSwingCNPM_VIP_git\\FileImage\\logo2.png";
     
      //package LeTan/QLDatMon_LeTan
-    public static String fileImageTable="D:\\Code\\java-netbean projects\\JavaSwingCNPM_VIP\\FileImage\\table.png";
+    public static String fileImageTable="C:\\Users\\vien1\\Downloads\\OceanTech\\monPTPMUngDung\\JavaSwingCNPM_VIP_git\\FileImage\\table.png";
     //package QuanLy/quanLyHoaDon
-    public static String fileImageBill="D:\\Code\\java-netbean projects\\JavaSwingCNPM_VIP\\FileImage\\bill.png";
+    public static String fileImageBill="C:\\Users\\vien1\\Downloads\\OceanTech\\monPTPMUngDung\\JavaSwingCNPM_VIP_git\\FileImage\\bill.png";
     //package QuanLy/quanLyHoaDon
-    public static String fileImageTeam="D:\\Code\\java-netbean projects\\JavaSwingCNPM_VIP\\FileImage\\team.png";
+    public static String fileImageTeam="C:\\Users\\vien1\\Downloads\\OceanTech\\monPTPMUngDung\\JavaSwingCNPM_VIP_git\\FileImage\\team.png";
     //package QuanLy/quanLyHoaDon
-    public static String fileImageMenu="D:\\Code\\java-netbean projects\\JavaSwingCNPM_VIP\\FileImage\\menu.png";
+    public static String fileImageMenu="C:\\Users\\vien1\\Downloads\\OceanTech\\monPTPMUngDung\\JavaSwingCNPM_VIP_git\\FileImage\\menu.png";
     
+    public static DatabaseHandler dbhander;
+            
     public static void main(String[] args) throws IOException {
-        if(!checkFileIsNull(duongDanDSMon))
-            dsMon.docTuFile(duongDanDSMon);
-        if(!checkFileIsNull(duongDanDSHD))
-            dsHD.docTuFile(duongDanDSHD);
-        if(!checkFileIsNull(duongDanDSKH))
-            dsKH.docTuFile(duongDanDSKH);        
-        if(!checkFileIsNull(duongDanDSNV))
-            dsNV.docTuFile(duongDanDSNV);
-        
+        DatabaseConnection.connect();
+        dbhander = new DatabaseHandler();
+        dsMon.docTuFile();
+        dsHD.docTuFile();
+        dsKH.docTuFile();
+        dsNV.docTuFile();
         dsBan.taoDSThongTinBan();
         login.setLocationRelativeTo(null);
         login.setVisible(true);

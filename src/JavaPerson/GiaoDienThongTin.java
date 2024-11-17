@@ -70,7 +70,7 @@ public class GiaoDienThongTin extends javax.swing.JPanel {
             txtSDT.setText("0943029135");
             txtChucVu.setText("Admin");
             
-            addImage(bImage, "D:\\Code\\java-netbean projects\\JavaSwingCNPM_VIP\\FileImage\\me.jpg", 240, 240);
+            addImage(bImage, "C:\\Users\\vien1\\Downloads\\OceanTech\\monPTPMUngDung\\JavaSwingCNPM_VIP_git\\FileImage\\me.jpg", 240, 240);
         }
         pMainTT.addColor(new ModelColor(color1,0f),
                  new ModelColor(color3, 1f));

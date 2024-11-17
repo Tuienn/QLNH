@@ -19,37 +19,14 @@ public class dsHoaDon {
     }
     
     //Thao tác với file
-    public void luuVaoFile(String duongDan) throws IOException
+    public void luuVaoFile()
     {
-        FileWriter fw = new FileWriter(duongDan);
-        BufferedWriter bw = new BufferedWriter(fw);
-        
-        for(hoaDon m : dsHD)
-        {
-            bw.write(m.toStringFile());
-            bw.newLine();
-        }
-        
-        bw.close();
-        fw.close();
+        javaswingcnpm_vip.JavaSwingCNPM_VIP.dbhander.saveHoaDon(dsHD);
     }
     
-    public void docTuFile(String duongDan) throws FileNotFoundException, IOException
+    public void docTuFile()
     {
-        FileReader fr = new FileReader(duongDan);
-        BufferedReader br = new BufferedReader(fr);
-        
-        String str = "";
-        while((str=br.readLine())!=null)
-        {
-            String[] obj = str.split("\\$");
-            
-            String tenKH = obj[0];
-            String thoiGian = obj[1];
-            String dlBang = obj[2];
-            
-            themHoaDonMoi(tenKH, thoiGian, dlBang);
-        }
+        javaswingcnpm_vip.JavaSwingCNPM_VIP.dbhander.getAllHoaDon(dsHD);
     }
     public void inDSHD()
     {

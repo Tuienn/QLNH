@@ -1135,12 +1135,8 @@ public class QLDatMon_LeTan extends javax.swing.JPanel {
                 String dlBang = dsThongTinBan.dsBan[maBan_historyClick-1].getDuLieuBang_theoBan();
                 dsHD.themHoaDonMoi(tenKH, thoiGian, dlBang);
                 
-                try {
-                    //Lưu vào file
-                    dsHD.luuVaoFile(JavaSwingCNPM_VIP.duongDanDSHD);
-                } catch (IOException ex) {
-                    Logger.getLogger(QLDatMon_LeTan.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                //Lưu vào file
+                dsHD.luuVaoFile();
                 
                 //Thông báo xem hóa đơn
                 String strThanhToan = "Tên khách hàng: "+txtTenKH.getText()+"\nChi phí hóa đơn: "+tinhTotal()+"\nXem chi tiết hóa đơn?";

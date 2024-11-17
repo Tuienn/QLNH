@@ -46,40 +46,14 @@ public class danhSachMonAn {
         return -1;
     }
     //Thao tác với file
-    public void luuVaoFile(String duongDan) throws IOException
+    public void luuVaoFile()
     {
-        FileWriter fw = new FileWriter(duongDan);
-        BufferedWriter bw = new BufferedWriter(fw);
-        
-        for(monAn m : dsMon)
-        {
-            bw.write(m.toStringFile());
-            bw.newLine();
-        }
-        
-        bw.close();
-        fw.close();
+        javaswingcnpm_vip.JavaSwingCNPM_VIP.dbhander.luuMonAn(dsMon);
     }
     
-    public void docTuFile(String duongDan) throws FileNotFoundException, IOException
+    public void docTuFile()
     {
-        FileReader fr = new FileReader(duongDan);
-        BufferedReader br = new BufferedReader(fr);
-        
-        String str = "";
-        while((str=br.readLine())!=null)
-        {
-            String[] obj = str.split("\\$");
-            
-            String maMonAn = obj[0];
-            String tenMonAn = obj[1];
-            String maDanhMuc = obj[2];
-            double gia = Double.parseDouble(obj[3]);
-            String filePathImage = obj[4];
-            
-            monAn m = new monAn(maMonAn, tenMonAn, maDanhMuc, gia,filePathImage);
-            dsMon.add(m);
-        }
+        javaswingcnpm_vip.JavaSwingCNPM_VIP.dbhander.getAllMonAn(dsMon);
     }
     
     //Tách danh sách theo loại món ăn
