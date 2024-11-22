@@ -249,7 +249,7 @@ public class QLDatMon_LeTan extends javax.swing.JPanel {
         txtTenKH.setText(tenKH);
         //Thời gian
         String thoiGian = dsThongTinBan.dsBan[maBan_int-1].getThoiGian();
-        String[] tg = thoiGian.split("/");
+        String[] tg = thoiGian.split("-");
         
         cbNgay.setSelectedItem(tg[0]);
         cbThang.setSelectedItem(tg[1]);
@@ -258,7 +258,7 @@ public class QLDatMon_LeTan extends javax.swing.JPanel {
         refreshTable();
         //Xử lý dữ liệu bảng món gọi    
         String dlBangMon = dsThongTinBan.dsBan[maBan_int-1].getDuLieuBang_theoBan();
-        String[] dlBang_Hang = dlBangMon.split("/");
+        String[] dlBang_Hang = dlBangMon.split("-");
         
         int stt=1;
         for(String dlMon : dlBang_Hang)
@@ -1020,9 +1020,9 @@ public class QLDatMon_LeTan extends javax.swing.JPanel {
 
                 String tenKH = txtTenKH.getText();
 
-                String thoiGian = String.valueOf(cbNgay.getSelectedItem())
-                        + "/" + String.valueOf(cbThang.getSelectedItem())
-                        + "/" + String.valueOf(cbNam.getSelectedItem());
+                String thoiGian = String.valueOf(cbNam.getSelectedItem())
+                        + "-" + String.valueOf(cbThang.getSelectedItem())
+                        + "-" + String.valueOf(cbNgay.getSelectedItem());
 
                 String dlBangHoaDon = layDuLieuBang();
                 //Lưu thông tin bàn theo vị trí tương ứng trong thongTinBan[] dsBan

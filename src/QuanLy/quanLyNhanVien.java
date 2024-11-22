@@ -84,6 +84,7 @@ public class quanLyNhanVien extends javax.swing.JPanel {
     }
     public void loadDataTable()
     {            
+        System.out.println("loadDataTable");
         //Chỉnh sửa dữ liệu cho cột, hàng
         //Các cột được thêm vào trực tiếp trên design
         //Thêm dl hàng
@@ -257,6 +258,7 @@ public class quanLyNhanVien extends javax.swing.JPanel {
     private void bXoaNVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bXoaNVActionPerformed
         //Xóa món thì xóa trên trong dsMon, rồi đọc dữ liệu 
         //từ dsMon đó. Lưu dữ liệu dsMon vào filr
+        System.out.println("bXoaNVActionPerformed");
         String inputText = JOptionPane.showInputDialog(this, "Nhập mã nhân viên", "Xóa nhân viên", JOptionPane.DEFAULT_OPTION);
         int index = JavaSwingCNPM_VIP.dsNV.timKiemNhanVien_taiKhoan(inputText);
         if(index!=-1)
@@ -276,15 +278,19 @@ public class quanLyNhanVien extends javax.swing.JPanel {
     private void tbDSNVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbDSNVMouseClicked
         indexDong_click = tbDSNV.getSelectedRow();
         
+        System.out.println("tbDSNVMouseClicked");
         chiTietThongTinNV_QL CtTT = new chiTietThongTinNV_QL();
-        
+        System.out.println("tbDSNVMouseClicked3");
         CtTT.setLocationRelativeTo(null);
+        System.out.println("tbDSNVMouseClicke4");
         CtTT.setVisible(true);
+        System.out.println("tbDSNVMouseClicke2");
     }//GEN-LAST:event_tbDSNVMouseClicked
 
     private void bThemNVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bThemNVActionPerformed
         chiTietThongTinNV_QL CtTT = new chiTietThongTinNV_QL();
         
+        System.out.println("bThemNVActionPerformed");
         CtTT.setLocationRelativeTo(null);
         CtTT.setVisible(true);
     }//GEN-LAST:event_bThemNVActionPerformed
