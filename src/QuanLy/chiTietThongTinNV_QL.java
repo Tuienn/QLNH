@@ -35,6 +35,7 @@ public class chiTietThongTinNV_QL extends javax.swing.JFrame {
         
         if(quanLyNhanVien.indexDong_click!=-1)
         {
+            System.out.println("1");
             //Lấy dữ liệu
             String taiKhoan = dsNV.get(quanLyNhanVien.indexDong_click).getTaiKhoan();
             String matKhau = dsNV.get(quanLyNhanVien.indexDong_click).getMatKhau();
@@ -46,15 +47,21 @@ public class chiTietThongTinNV_QL extends javax.swing.JFrame {
             int chucVu = dsNV.get(quanLyNhanVien.indexDong_click).getChucVu();
             String filePathImage = dsNV.get(quanLyNhanVien.indexDong_click).getFilePathImage();
             
+            System.out.println("2");
             txtTaiKhoan.setText(taiKhoan);
             txtMatKhau.setText(matKhau);
             txtHoTen.setText(hoTen);
             
-            String[] date = ngaySinh.split("/");
+            System.out.println("3");
+            String[] date = ngaySinh.split("-");
+            System.out.println("date :"+date);
+            System.out.println("ngaySinh :"+ngaySinh);
             cbNgay.setSelectedItem(date[0]);
+            System.out.println("3");
             cbThang.setSelectedItem(date[1]);
+            System.out.println("3");
             cbNam.setSelectedItem(date[2]);
-            
+            System.out.println("3");
             if(gioiTinh.equals("Nam"))
                 rbNam.setSelected(true);
             else
@@ -400,9 +407,9 @@ public class chiTietThongTinNV_QL extends javax.swing.JFrame {
         String taiKhoan = txtTaiKhoan.getText();
         String matKhau = new String(txtMatKhau.getPassword());
         String hoTen = txtHoTen.getText();
-        String ngaySinh=String.valueOf(cbNgay.getSelectedItem())+"/"
-                +String.valueOf(cbThang.getSelectedItem())+"/"
-                +String.valueOf(cbNam.getSelectedItem());
+        String ngaySinh=String.valueOf(cbNam.getSelectedItem())+"-"
+                +String.valueOf(cbThang.getSelectedItem())+"-"
+                +String.valueOf(cbNgay.getSelectedItem());
         String gioiTinh="";
         if(rbNam.isSelected())
             gioiTinh="Nam";
