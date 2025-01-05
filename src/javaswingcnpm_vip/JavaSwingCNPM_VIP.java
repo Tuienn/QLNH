@@ -41,8 +41,6 @@ public class JavaSwingCNPM_VIP {
     public static boolean flag2=true;//Dùng cho tb dsMon
     public static boolean flag3=true;//Dùng cho tb dsHD
     public static boolean flag4=true;//Dùn cho tbDSNV
-    //Đăng nhập
-    public static DangNhap login = new DangNhap();
 
     
     //Danh sách lưu đối tượng    
@@ -68,6 +66,9 @@ public class JavaSwingCNPM_VIP {
     public static String fileImageMenu="C:\\Users\\vien1\\Downloads\\OceanTech\\monPTPMUngDung\\JavaSwingCNPM_VIP_git\\FileImage\\menu.png";
     
     public static DatabaseHandler dbhander;
+    
+    //Đăng nhập
+    public static DangNhap login = new DangNhap();
             
     public static void main(String[] args) throws IOException {
         DatabaseConnection.connect();
@@ -76,6 +77,7 @@ public class JavaSwingCNPM_VIP {
         dsHD.docTuFile();
         dsKH.docTuFile();
         dsNV.docTuFile();
+        System.out.println("1");
         dsBan.taoDSThongTinBan();
         login.setLocationRelativeTo(null);
         login.setVisible(true);
